@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>bohr-js test</title>
+    <link rel="icon" type="image/svg" href="bohr-logo.svg" />
+    <link
+      href="bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
+
+  <body>
+    <main class="container-fluid">
+      <header>
+        <div id="logo-container">
+          <h1 id="logo-text" class="text-center">
+            Bohr Dapp Demo
+          </h1>
+
+          <img id="mm-logo" src="bohr-logo.svg" />
+        </div>
+      </header>
+
+      <section>
+        <div class="row d-flex justify-content-center">
+          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  Basic Actions
+                </h4>
+
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="connectButton"
+                  disabled
+                >
+                  Connect
+                </button>
+
+                <button
+                        class="btn btn-primary btn-lg btn-block mb-3"
+                        id="addressEncode"
+                >
+                  Address Encode
+                </button>
+
+                <button
+                        class="btn btn-primary btn-lg btn-block mb-3"
+                        id="addressDecode"
+                >
+                  Address Decode
+                </button>
+
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="createKey"
+                >
+                  Create Key
+                </button>
+
+                <button
+                        class="btn btn-primary btn-lg btn-block mb-3"
+                        id="importPrivateKey"
+                >
+                  Import Private Key
+                </button>
+
+
+                <p class="info-text alert alert-secondary">
+                  result: <span id="getAccountsResult"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row d-flex justify-content-center">
+          <div
+            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch"
+          >
+            <div class="card full-width">
+              <div class="card-body">
+                <h4 class="card-title">
+                  Transaction
+                </h4>
+                <div style="display: flex;flex-direction: column;">
+                  <input id="sendNum" class="creat-input" value="0.0001" placeholder="Amount" />
+                  <input id="sendAddress" class="creat-input" value="Bf5xCRoLWqzqSuzghTdeBskHDahVNR6ASUa" placeholder="Address"/>
+                  <input id="sendPrivateKey" class="creat-input" value="" placeholder="PrivateKey" />
+                </div>
+
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="sendButton"
+                >
+                  Send BR
+                </button>
+
+
+
+                <button
+                        class="btn btn-primary btn-lg btn-block mb-3"
+                        id="sendBrc20Button"
+                >
+                  Send BRC20( BO )
+                </button>
+
+                <button
+                        class="btn btn-primary btn-lg btn-block mb-3"
+                        id="getBalanceBrc20Button"
+                >
+                  balanceOf  BRC20 ( BO )
+                </button>
+
+
+                <p class="info-text alert alert-secondary">
+                  result: <span id="transactionResult"></span>
+                </p>
+
+                <hr />
+
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch"
+          >
+          </div>
+        </div>
+      </section>
+
+
+      <div id="toastWarp" class="toast-warp">
+        <div id="showToast" class="show-toast"></div>
+      </div>
+
+      <div id="showTips" class="show-tips"></div>
+
+
+    </main>
+    <script src="bundle.js" defer></script>
+  </body>
+</html>
